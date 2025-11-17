@@ -15,8 +15,9 @@
     font-feature-settings: normal;
     font-variation-settings: normal;
     font-family:
-      "LXGW ZhenKai",
+      "ToneOZ-Tsuipita-TC",
       "LXGW WenKai",
+      "LXGW ZhenKai",
       "Noto Sans TC",
       -apple-system,
       BlinkMacSystemFont,
@@ -38,7 +39,7 @@
     text-autospace: ideograph-alpha ideograph-numeric insert;
 
     line-height: 1.5rem;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.02em;
   }
 
   ::selection {
