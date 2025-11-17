@@ -3,7 +3,7 @@
   "include": [
     ".astro/types.d.ts",
     "../playground/.astro/types.d.ts",
-    "../playground/.astro/charm.d.ts",
+    "../playground/.astro/fish.d.ts",
     "**/*"
   ],
   "compilerOptions": {

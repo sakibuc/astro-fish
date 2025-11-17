@@ -1,7 +1,7 @@
 {
   "name": "astro-fish",
   "version": "0.0.1",
-  "description": "Beautiful and easy-to-use blog theme",
+  "description": "Beautiful and easy-to-use blog theme for Astro built based on Charm.",
   "license": "MIT",
   "author": {
     "name": "Felishh77"

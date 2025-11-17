@@ -40,8 +40,8 @@ import GithubCardComponent from "./src/plugins/rehype-component-github-card.mjs"
 import remarkComponentEmbed from "./src/plugins/remark-component-embed.mjs";
 import { existsSync } from "node:fs";
 
-// The Charm theme uses `astro-icon`. For usage details, see: https://github.com/natemoo-re/astro-icon?tab=readme-ov-file#iconify-icons
-// By default, the Charm theme uses `@iconify-json/simple-icons` and `@iconify-json/solar`. You need to install these two packages.
+// The Fish theme uses `astro-icon`. For usage details, see: https://github.com/natemoo-re/astro-icon?tab=readme-ov-file#iconify-icons
+// By default, the Fish theme uses `@iconify-json/simple-icons` and `@iconify-json/solar`. You need to install these two packages.
 export const iconStringOrLightDark = z.string().or(
   z.object({
     light: z.string(),
@@ -102,7 +102,7 @@ const configSchema = z.object({
         },
         {
           title: "GitHub",
-          link: "https://github.com/yuhanawa/astro-charm",
+          link: "https://github.com/yuhanawa/astro-fish",
           icon: "simple-icons:github",
         },
       ]),
@@ -162,7 +162,7 @@ const configSchema = z.object({
 });
 
 const theme = defineTheme({
-  name: "charm",
+  name: "fish",
   schema: configSchema,
   integrations: [icon(), pagefind(), sitemap()],
   imports: {
@@ -183,22 +183,22 @@ export default function (
   themeOptions: Parameters<typeof theme>[0],
 ): AstroIntegration {
   if (!themeOptions || !themeOptions.config) {
-    console.error("No Charm Config Found");
+    console.error("No Fish Config Found");
     console.info(
-      "Please add config to your astro.config.{ts,mts,js,mjs}, you can find the example in `https://github.com/Yuhanawa/astro-charm/blob/main/package/theme-example/astro-charm.theme.ts`",
+      "Please add config to your astro.config.{ts,mts,js,mjs}, you can find the example in `https://github.com/felishh77/astro-fish/blob/main/package/theme-example/astro-fish.theme.ts`",
     );
     console.info("Here is an example:");
     console.info(
       `
     export default defineConfig({
       integrations: [
-        charm({
+        fish({
           config: {
             lang: "en",
-            title: "Charm Theme",
+            title: "Fish Theme",
             description: "A beautiful blog theme for Astro",
             side: {
-              title: "Charm Theme",
+              title: "Fish Theme",
               sub: "A blog theme for Astro",
               bio: "Cupidatat ex id eiusmod aute do labore ea minim eu fugiat Lorem fugiat adipisicing.",
             },
@@ -208,11 +208,11 @@ export default function (
       ]
     });`,
     );
-    throw new Error("No Charm Config Found");
+    throw new Error("No Fish Config Found");
   }
 
-  // if ./src/styles/custom-charm.{css,scss,less,styl} exists, add it to userCustomStyle
-  const customStylePath = "./src/styles/custom-charm.css";
+  // if ./src/styles/custom-fish.{css,scss,less,styl} exists, add it to userCustomStyle
+  const customStylePath = "./src/styles/custom-fish.css";
   if (existsSync(customStylePath))
     (themeOptions.overrides ??= {}).userCustomStyle ??= [customStylePath];
 
