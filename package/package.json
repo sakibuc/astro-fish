@@ -1,6 +1,6 @@
 {
   "name": "astro-fish",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Beautiful and easy-to-use blog theme for Astro built based on Fish.",
   "license": "MIT",
   "author": {
@@ -42,6 +42,7 @@
     "@types/d3": "^7.4.3",
     "@types/mdast": "^4.0.4",
     "@types/node": "^22.14.0",
+    "@unocss/preset-uno": "^66.5.6",
     "astro": "^5.14.5",
     "autoprefixer": "^10.4.22",
     "cz-conventional-changelog": "^3.3.0",
@@ -50,7 +51,8 @@
     "stylelint": "^16.24.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^39.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "unocss": "^66.5.6"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
@@ -86,8 +88,7 @@
     "remark-toc": "^9.0.0",
     "spdx-license-list": "^6.10.0",
     "svelte": "^5.43.10",
-    "unist-util-visit": "^5.0.0",
-    "unocss": "^66.5.6"
+    "unist-util-visit": "^5.0.0"
   },
   "peerDependencies": {
     "@iconify-json/simple-icons": "^1.2.0",
