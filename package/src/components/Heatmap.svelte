@@ -37,7 +37,7 @@
 
 <section class="grid grid-flow-col grid-rows-7 gap-1">
   {#each heatmap.reverse() as day}
-    {@const number = day.posts.length} // + day.jottings.length}
+    {@const number = day.posts.length}
     <figure class="relative group">
       <i
         class="block w-2.5 h-2.5 bg-primary {number > 2

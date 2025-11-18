@@ -1,5 +1,11 @@
 # astro-fish
 
+## 0.3.2
+
+### Patch Changes
+
+- fix(heatmap): deleted false comment
+
 ## 0.3.1
 
 ### Patch Changes
