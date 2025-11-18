@@ -6,7 +6,6 @@ import icon from "./src/integrations/astro-icon/src/index";
 import pagefind from "astro-pagefind";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
-import tailwind from "@astrojs/tailwind";
 import UnoCSS from "unocss/astro";
 
 // shiki transformers
@@ -172,7 +171,6 @@ const theme = defineTheme({
     pagefind(),
     sitemap(),
     svelte(),
-    tailwind(),
     UnoCSS({
       injectReset: "@unocss/reset/normalize.css",
     }),
