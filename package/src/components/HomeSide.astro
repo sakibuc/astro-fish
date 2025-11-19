@@ -4,7 +4,7 @@ import { BaseSide } from "fish:components";
 const { useH1 = false } = Astro.props;
 import { getPostEntries } from "../utils/collectionUtils";
 const Title = useH1 ? "h1" : "strong";
-import Heatmap from "../components//Heatmap.svelte";
+import Heatmap from "../components/Heatmap.astro";
 
 const posts = await getPostEntries();
 ---
