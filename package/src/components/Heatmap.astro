@@ -1,0 +1,62 @@
+---
+import Time from "../utils/time";
+
+const { posts, weeks = 20 } = Astro.props;
+
+const locale = "zh-cn"; // 当前语言
+
+const days = weeks * 7; // 转换成天数
+
+// 以本周六为参考点
+const now = new Date();
+const start = Time.addDays(now, (6 - Time.weekday(now)) % 7);
+
+// 创建 heatmap 数据结构，每天包含日期和 posts 数组
+const heatmap = Array.from({ length: days }, (_, day) => ({
+  date: Time.subtractDays(start, day),
+  posts: [] as typeof posts,
+}));
+
+// 填充 heatmap 数据
+posts.forEach((post: any) => {
+  const gap = Time.diffDays(start, post.data.timestamp);
+  if (0 <= gap && gap < days) heatmap[gap].posts.push(post);
+});
+
+// 将数据倒序显示（从最早到最晚）
+const reversedHeatmap = heatmap.reverse();
+---
+
+<section class="heatmap">
+  {
+    reversedHeatmap.map((day) => {
+      const count = day.posts.length;
+      return (
+        <div class="heatmap-cell" data-count={count}>
+          <div class="heatmap-tooltip">
+            <time>{Time.date.locale(day.date, locale)}</time>
+            {count > 0 ? (
+              <>
+                <p>{count}篇文章</p>
+                <ul>
+                  {day.posts.map((post: any) => (
+                    <li>
+                      <a
+                        href={`/posts/${post.slug}`}
+                        aria-label={post.data.title}
+                      >
+                        {post.data.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p>神马都没有~</p>
+            )}
+          </div>
+        </div>
+      );
+    })
+  }
+</section>

@@ -1,5 +1,11 @@
 # astro-fish
 
+## 0.4.0
+
+### Minor Changes
+
+- remove svelte integration; rewrite Heatmap
+
 ## 0.3.8
 
 ### Patch Changes
