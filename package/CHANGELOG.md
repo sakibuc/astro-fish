@@ -1,5 +1,11 @@
 # astro-fish
 
+## 0.4.1
+
+### Patch Changes
+
+- fix: totally removed svelte
+
 ## 0.4.0
 
 ### Minor Changes

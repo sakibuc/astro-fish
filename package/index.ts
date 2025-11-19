@@ -5,7 +5,6 @@ import licenses from "spdx-license-list/simple";
 import icon from "./src/integrations/astro-icon/src/index";
 import pagefind from "astro-pagefind";
 import sitemap from "@astrojs/sitemap";
-import svelte from "@astrojs/svelte";
 
 // shiki transformers
 import { transformerColorizedBrackets } from "@shikijs/colorized-brackets";
@@ -165,7 +164,7 @@ const configSchema = z.object({
 const theme = defineTheme({
   name: "fish",
   schema: configSchema,
-  integrations: [icon(), pagefind(), sitemap(), svelte()],
+  integrations: [icon(), pagefind(), sitemap()],
   imports: {
     userCustomStyle: "./__no_match__",
     custom: {
