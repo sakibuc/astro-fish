@@ -1,5 +1,11 @@
 # astro-fish
 
+## 0.4.9
+
+### Patch Changes
+
+- feat: new heatmap style
+
 ## 0.4.8
 
 ### Patch Changes
