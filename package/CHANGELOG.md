@@ -1,5 +1,11 @@
 # astro-fish
 
+## 0.4.7
+
+### Patch Changes
+
+- fix: fix heatmap overflow
+
 ## 0.4.6
 
 ### Patch Changes
